@@ -1,0 +1,14 @@
+inputSet:
+  name: Build_leo_1786036492279-pr-trigger-input-set
+  identifier: Build_leo_1786036492279prtriggerinputset
+  orgIdentifier: default
+  projectIdentifier: default_project
+  pipeline:
+    identifier: Build_leo_1786036492279
+    properties:
+      ci:
+        codebase:
+          build:
+            type: PR
+            spec:
+              number: <+trigger.prNumber>
