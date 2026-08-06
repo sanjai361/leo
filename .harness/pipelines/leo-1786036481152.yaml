@@ -25,6 +25,33 @@ pipeline:
           runtime:
             type: Cloud
             spec: {}
+        description: ""
+    - stage:
+        name: harness_test
+        identifier: harness_test
+        description: ""
+        type: CI
+        spec:
+          cloneCodebase: true
+          caching:
+            enabled: true
+            override: true
+          buildIntelligence:
+            enabled: true
+          platform:
+            os: Linux
+            arch: Amd64
+          runtime:
+            type: Cloud
+            spec: {}
+          execution:
+            steps:
+              - step:
+                  type: Run
+                  name: Run_1
+                  identifier: Run_1
+                  spec:
+                    shell: Sh
   properties:
     ci:
       codebase:
